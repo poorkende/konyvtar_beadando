@@ -1,2 +1,2 @@
 # konyvtar_beadando
-2.ZH beadandóm
+Beadandóm a Programozási Környezetek órára
