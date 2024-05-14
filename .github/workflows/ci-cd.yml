@@ -20,4 +20,4 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
-        working-directory: konyvtar_beadando/konyvek_beadando/pom.xml
+        working-directory: /konyvek_beadando/pom.xml
