@@ -12,5 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Run Maven clean install
+      - name: Build with Maven
+        working-directory: C:\Users\MSI\Downloads\konyvek_beadando
         run: mvn clean install
