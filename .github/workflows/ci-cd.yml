@@ -1,0 +1,19 @@
+name: CI-CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    container:
+      image: mcr.microsoft.com/windows/servercore:ltsc2019
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Maven clean install
+        run: mvn clean install
