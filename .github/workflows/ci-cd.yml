@@ -14,4 +14,4 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
-        working-directory: C:\Users\MSI\Downloads\konyvek_beadando
+        working-directory: .
