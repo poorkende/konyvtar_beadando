@@ -3,7 +3,6 @@ package com.konyvesbolt.konyvek_beadando.control;
 import com.konyvesbolt.konyvek_beadando.model.BookEntity;
 import com.konyvesbolt.konyvek_beadando.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

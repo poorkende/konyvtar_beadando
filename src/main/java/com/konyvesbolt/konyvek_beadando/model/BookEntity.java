@@ -23,6 +23,7 @@ public class BookEntity {
     @Column(name = "books_genre")
     private String genre;
 
+    // Getterek és setterek
     public Long getId() {
         return id;
     }
@@ -60,15 +61,6 @@ public class BookEntity {
     }
 
     public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public BookEntity() {}
-
-    public BookEntity(String titles, String author, int released, String genre) {
-        this.titles = titles;
-        this.author = author;
-        this.released = released;
         this.genre = genre;
     }
 }
