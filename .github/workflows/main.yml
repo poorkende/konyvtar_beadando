@@ -1,0 +1,21 @@
+name: Run Main Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  run-main-workflow:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Run Main Workflow
+        run: |
+          # Futtatja a main.yml fájlt
+          cd .github/workflows
+          ls  # Ellenőrzi, hogy a main.yml fájl ott van-e
+          # Itt futtasd a main.yml fájlt a megfelelő paranccsal
