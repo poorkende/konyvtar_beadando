@@ -1,0 +1,12 @@
+<servers>
+    <server>
+        <id>artifactory-releases</id>
+        <username>poorkende@gmail.com</username>
+        <password>Konyvtar2024</password>
+    </server>
+    <server>
+        <id>artifactory-snapshots</id>
+        <username>poorkende@gmail.com</username>
+        <password>Konyvtar2024</password>
+    </server>
+</servers>

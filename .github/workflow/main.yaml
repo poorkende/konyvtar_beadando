@@ -19,15 +19,9 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Configure Maven settings
+        run: echo "<settings><servers><server><id>artifactory-repo</id><username>poorkende@gmail.com</username><password>Konyvtar2024</password></server></servers></settings>" > $C:\Users\MSI\Downloads\konyvek_beadando\settings.xml
 
-      - name: Copy Jar to Git Repository
-        run: cp target/konyvek_beadando-0.0.1-SNAPSHOT.jar ./konyvtar_beadando/
-
-      - name: Commit and Push
+      - name: Build with Maven and deploy artifact
         run: |
-          cd konyvtar_beadando/
-          git add .
-          git commit -m "Add jar file"
-          git push origin main
+          mvn clean deploy

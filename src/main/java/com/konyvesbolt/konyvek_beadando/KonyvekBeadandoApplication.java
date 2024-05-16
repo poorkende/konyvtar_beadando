@@ -1,3 +1,8 @@
+/**
+ * A Spring Boot alkalmazás beleprsi pontja,
+ * amely inicializalja és indítja el az alkalmazást.
+ */
+
 package com.konyvesbolt.konyvek_beadando;
 
 import com.konyvesbolt.konyvek_beadando.repository.BookRepository;
@@ -10,17 +15,28 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class KonyvekBeadandoApplication {
 
-	@Autowired
-	private BookRepository bookRepository;
+ @Autowired
+ private BookRepository bookRepository;
 
-	public static void main(String[] args) {
-		SpringApplication.run(KonyvekBeadandoApplication.class, args);
-	}
+ /**
+  * Entry point of the application.
+  *
+  * @param args Command line arguments.
+  */
+ public static void main(final String[] args) {
+  SpringApplication.run(KonyvekBeadandoApplication.class, args);
+ }
 
-	@Bean
-	public CommandLineRunner commandLineRunner() {
-		return args -> {
-			System.out.println("A program elindult.");
-		};
-	}
+ /**
+  * A command line runner bean.
+  * @return The CommandLineRunner instance.
+  * A parancssori futtato interfesz,
+  * amely inicializalja és indítja el az alkalmazast.
+  */
+ @Bean
+ public CommandLineRunner commandLineRunner() {
+  return args -> {
+   System.out.println("A program elindult.");
+  };
+ }
 }
