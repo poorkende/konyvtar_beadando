@@ -1,3 +1,6 @@
+/*
+*Book Controller
+ */
 package com.konyvesbolt.konyvek_beadando.control;
 
 import com.konyvesbolt.konyvek_beadando.model.BookEntity;
