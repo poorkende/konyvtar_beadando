@@ -1,13 +1,10 @@
 package com.konyvesbolt.konyvek_beadando.control;
-
 import com.konyvesbolt.konyvek_beadando.model.BookEntity;
 import com.konyvesbolt.konyvek_beadando.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
-
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
@@ -16,7 +13,6 @@ public class BookController {
      */
     @Autowired
     private BookRepository bookRepository;
-
     /**
      * Add a new book.
      *
@@ -28,7 +24,6 @@ public class BookController {
         bookRepository.save(book);
         return "Book added successfully!";
     }
-
     /**
      * Delete a book by ID.
      *
@@ -40,7 +35,6 @@ public class BookController {
         bookRepository.deleteById(id);
         return "Book deleted successfully!";
     }
-
     /**
      * Find a book by its title.
      *
@@ -51,7 +45,6 @@ public class BookController {
     public Optional<BookEntity> findBookByTitle(@PathVariable final String title) {
         return bookRepository.findByTitlesOrId(title, null);
     }
-
     /**
      * Find books by genre.
      *
@@ -62,7 +55,6 @@ public class BookController {
     public List<BookEntity> findBooksByGenre(@PathVariable final String genre) {
         return bookRepository.findByGenre(genre);
     }
-
     /**
      * Find books by author.
      *
