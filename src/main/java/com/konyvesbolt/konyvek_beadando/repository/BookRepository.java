@@ -12,5 +12,5 @@ public interface BookRepository extends JpaRepository<BookEntity, Long> {
     Optional<BookEntity> findByTitlesOrId(String titles, Long id);
     void deleteByTitles(String titles);
     List<BookEntity> findByGenre(String genre);
-    List<BookEntity> findByAuthor(String author);  // Új metódus hozzáadása
+    List<BookEntity> findByAuthor(String author);
 }
