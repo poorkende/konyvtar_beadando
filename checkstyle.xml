@@ -6,6 +6,25 @@
 <module name="Checker">
     <property name="charset" value="UTF-8"/>
 
-    <!-- Csak fájl hossz ellenőrzése -->
-    <module name="FileLength"/>
+    <!-- Fájl hossz ellenőrzése -->
+    <module name="FileLength">
+        <property name="max" value="1000"/>
+        <property name="fileExtensions" value="java,xml"/>
+    </module>
+
+    <!-- Figyelje a felesleges tabulátorokat is -->
+    <module name="RegexpSingleline">
+        <property name="format" value="\t"/>
+        <property name="message" value="Unnecessary tab found."/>
+        <property name="fileExtensions" value="java,xml"/>
+    </module>
+
+    <!-- Ellenőrizze, hogy ne legyenek felesleges üres sorok -->
+    <module name="RegexpSingleline">
+        <property name="format" value="^\s*$"/>
+        <property name="message" value="Empty line found."/>
+        <property name="fileExtensions" value="java,xml"/>
+    </module>
+
+
 </module>
